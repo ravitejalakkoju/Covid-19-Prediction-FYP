@@ -1,0 +1,284 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: space-between; 
+    }
+    .logo{
+        color: #2c4964;
+    }
+    .menu ul{
+       list-style: none;
+       display: flex;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: #2c4964;
+    }
+    .Banner{
+        position: relative;
+    }
+    .Banner #bg-doctor{
+        width: 100%;
+        min-height: 50vh;
+        background-size: cover;
+    }
+    .Banner img{
+        width: 100%;
+        background-size: cover;
+    }
+    .heading, .tracking h3{
+        text-shadow: 2px 2px 2px white;
+    }
+    .tracking{
+        overflow-x: scroll;
+        max-width: 80vw;
+    }
+    .table table{
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 12px 12px 0 0;
+        overflow: hidden;
+        box-shadow: 0 12px 5px #ccc;
+    }
+    .table th{
+        background: #1977cc;
+        color: #ffffff;
+    }
+    .table th ,td{
+        padding: 15px;
+        text-align: center;      
+    }
+    .tracking table{
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 12px 12px 0 0;
+        overflow: hidden;
+        box-shadow: 0 12px 5px #ccc;
+    }
+    .tracking h3{
+        color:#383838;
+        text-align: center;
+    }
+    .tracking th{
+        background: #1977cc;
+        color: #ffffff;
+    }
+    .tracking th ,td{
+        padding: 0.75rem;
+        text-align: center;  
+    }
+    #corona{
+       width: 35px;
+       animation: rotation 3s infinite linear;
+   }
+   @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+      }
+    }
+    
+   .layer-1{
+       display: flex;
+       justify-content: space-between;
+   }
+   .about-covid h1{
+    font-weight: 700;
+    color: #2c4964;
+    }
+    .about-covid{
+        padding-left: 200px;
+    }
+    .about-covid p{
+        color: #2c4964;
+    }
+    .img1 img{
+        z-index: -1;
+    }
+    .box1:hover,.box2:hover,.box3:hover{
+        box-shadow: 0 5px 5px 0 #000;
+    }
+
+.main .para{
+    display:none;
+}
+.main .minus{
+    display: none;
+}
+.accheader{
+    margin: 20px 20px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    padding: 20px;
+    font-size: larger;
+    font-weight: 800;
+}
+.minus,.plus{
+    cursor: pointer;
+}
+.precaution h1{
+    color: #2c4964;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.precaution span{
+    color: #2c4964;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav2{
+    position: relative;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.nav2 p a {
+   writing-mode: vertical-rl; 
+   padding: 10px;
+   text-decoration: none;
+   display:flex;
+   margin-top: 3px;
+   position: -webkit-sticky;
+   position: sticky;
+}
+.nav2 p a:nth-child(1){
+color: white;
+background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+.nav2 p a:nth-child(2){
+color: white;
+background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+}
+.nav2 p a:nth-child(3){
+color: white;
+background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+.nav2 p a:nth-child(4){
+color: white;
+background: linear-gradient(to right, #1f4037, #99f2c8); 
+}
+.nav2 p a:nth-child(5){
+color: white;
+background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); 
+}
+
+.s-title{
+    color: #2c4964;
+    text-align: center;
+    font-size: 2rem;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s-box1,.s-box2,.s-box3{
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background-color: #ccc;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    transition: transform 0.5s;
+}
+.s-img{
+    display: flex;
+    justify-content: space-between;
+}
+.s-img img{
+    border-radius: 0.5rem;
+    vertical-align: middle;
+    width: 40px;
+}
+
+.s-box1:hover,
+.s-box2:hover,
+.s-box3:hover{
+    transform: scale(1.1);
+}
+.s-box1 article,.s-box2 article,.s-box3 article{
+    font-size: 1rem;
+}
+.s-des a{
+    text-decoration: none;
+    color: #444444;
+}
+.s-des a:hover{
+    color: tomato;
+}
+
+
+
+marquee{
+    background: tomato;
+    color: #fff;
+}
+marquee span{
+    color: yellow;
+}
+ 
+form .upload-box{
+border-radius: 50px;
+box-shadow: 5px 5px 10px black;
+outline: none;
+}
+
+::-webkit-file-upload-button{
+color: white;
+background: #206a5d;
+padding: 0.75rem 1rem;
+border: none;
+border-radius: 50px;
+box-shadow: 1px 0 1px 1px #6b4559;
+outline: none;
+cursor: pointer;
+}
+::-webkit-file-upload-button:hover{
+background: #438a5e;
+} form .button{
+padding: 0.75rem 1rem;
+border: none;
+border-radius: 20px;
+background: tomato;
+cursor: pointer;
+}
+
+.testing{
+display: flex;
+justify-content: space-between;
+}
+.form-card h2{
+    text-align: center;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+    0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 #ccc,
+    0 7px 0 #ccc, 0 8px 0 #ccc,
+    0 9px 0 #ccc, 0 10px 0 #ccc,
+    0 11px 0 #ccc, 0 12px 0 #ccc,
+    0 20px 30px rgba(0, 0, 0, 0.5);
+}
+.form-card{
+    border: 1px solid #fff;
+    background-color: #ccc;
+    background: rgba(255,255,255,.2);
+}
+
+.footer{
+text-align: center;
+background: #000;
+color: #8c969f;
+} 
