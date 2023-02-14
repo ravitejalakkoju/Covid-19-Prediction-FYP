@@ -6,3 +6,29 @@ The Covid-19 (also known as SARS-COV-2) that first occurred in Wuhan, 2019 which
 Publicly available X-ray images (1583 healthy and 712 confirmed COVID-19) AND (712 COVID-19, 4273 Pneumonia and 1583 Normal) were used in the experiments, which involved the training of deep learning and machine learning classifiers. 5 custom CNN (Convolution Neural Network) experiments were, and 5 experiments for both categorical and binary were performed using Transfer Learning Models with ImageNet set as weights.
 
 Keywords: Covid-19, SARS-COV-2, Deep Learning, Pre-Processing, Transfer Learning, Pandemic
+
+Getting Started
+To use our model, first, clone our repository to your local machine.
+
+git clone https://github.com/ravitejalakkoju/covid-19-prediction-fyp.git
+
+Prerequisites
+Our code is written in Python, and the following packages are required for running our code:
+
+TensorFlow
+Keras
+OpenCV
+NumPy
+Matplotlib
+To install these packages, run:
+
+pip install tensorflow keras opencv-python numpy matplotlib
+
+Usage
+Our repository contains the code for pre-processing the images, training the model, and testing the model. Follow the instructions in the Jupyter notebook to perform these tasks.
+
+Results
+Our proposed Transfer-Learning based model achieved an accuracy of X percent, demonstrating its effectiveness in Covid-19 detection. The model can be used to make quick and accurate diagnoses, which is crucial for controlling the spread of the disease.
+
+Acknowledgments
+We would like to thank the authors of the datasets used in our experiments, as well as the developers of the packages we used in our code.
