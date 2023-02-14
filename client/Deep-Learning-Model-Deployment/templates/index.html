@@ -1,0 +1,314 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- Top Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+          <div class="logo">
+            <h2>XCovid</h2>
+          </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav fw-bold">
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#preventions">Preventions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#testing">Testing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Top Nav Bar -->
+  
+   <!-- Banner -->
+  <section class="Banner">
+      <img src="{{ url_for('static', filename='images/doc.PNG') }}" id="bg-doctor" alt="Doctor">
+      <div class="position-absolute top-0 fw-bold p-2 p-md-5">
+          <p class="fs-1 heading">Let's Stay Safe & Fight Together <br> Against Cor<img src="{{ url_for('static', filename='images/corona.PNG') }}" id="corona" alt="">na Virus</p>   
+        <div class="tracking mt-3 col-12">
+          <h3>COVID-19 UPDATES in <span><img src=" " id="flag" style="width:30px"></span></h3>
+            <table>
+                <tr>
+                    <th>country</th>
+                    <th>cases</th>
+                    <th>critical</th>
+                    <th>death</th>
+                    <th>recovered</th>
+                    <th>tests</th>
+                    <th>active</th>
+                </tr>
+                <tr>
+                    <td id="country"></td>
+                    <td id="cases"></td>
+                    <td id="critical"></td>
+                    <td id="death"></td>
+                    <td id="recoverd"></td>
+                    <td id="tests"></td>
+                    <td id="active"></td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    <div class="nav2">
+        <p><a href="#home">Home</a>
+           <a href="#about">About</a>
+           <a href="#preventions">Preventions</a>
+           <a href="#Blog">Blog</a>
+           <a href="#testing">Testing</a>
+        </p>
+    </div>
+  
+        <!-- tracking in Banner --> 
+      
+  
+     <!-- About -->
+      <section class="layer-1 row col-12 p-2" id="about">
+          <!-- <div class="about-covid"> -->
+            <div class="about-covid col-12 col-lg-3 p-5 position-relative">
+              <h1 class="p-3 pb-0">HOW DOES COVID-19 SPREAD?</h1>
+              <p class="p-3">The virus is trasmitted through direct contact with respiratory droplets of an infected person.</p>
+              <div class="img1">
+                  <img src="{{ url_for('static', filename='images/1.PNG') }}" class="position-absolute bottom-0" alt="asd">
+               </div>
+            </div>
+              
+            <div class="a-card row col-12 col-lg-9 p-5">
+               <div class="box1 col-12 col-sm-4 mt-2 mt-sm-0 shadow-none">
+                  <img src="{{ url_for('static', filename='images/1.1.PNG') }}" class="p-5 pt-1 pt-sm-5 pb-1" alt="">
+                  <article>
+                      <h2>Coughing Or Sneezing</h2>
+                      <p>Coronavirus can spread if an infected person coughs or sneezes</p>
+                  </article>
+                </div>
+             
+                <div class="box2 col-12 col-sm-4 mt-2 mt-sm-0 shadow-none">
+                 <img src="{{ url_for('static', filename='images/2.2.PNG') }}" class="p-5 pt-1 pt-sm-5 pb-1" alt="">
+                 <article>
+                     <h2>Touching Infected Surfaces</h2>
+                     <p>Direct skin contact increases the likelihood of the infection</p>
+                 </article>
+                </div>
+
+                <div class="box3 col-12 col-sm-4 mt-2 mt-sm-0 shadow-none">
+                 <img src="{{ url_for('static', filename='images/3.3.PNG') }}" class="p-5 pt-1 pt-sm-5 pb-1 " alt="">
+                 <article>
+                     <h2>Close Personal Contact</h2>
+                     <p>Unsanitized or Infected surfaces can increase the likelihood of infection</p>
+                 </article>
+                </div>
+          </div>
+      </section>
+      <!-- About -->
+  
+      <!-- Precautions -->
+<section class="layer-2" id="preventions">
+    <div class="about row">
+        <div class="precaution col-12 col-md-6 p-5">
+            <h1>HOW TO STAY HEALTHY DURING COVID19</h1>
+            <span>You can take several precautions to protect yourself and loved ones from the novel coronavirus.</span>
+            <div class="p-img">
+                <img src="{{ url_for('static', filename='images/undraw_doctors_hwty.png') }}" alt="">
+            </div>
+        </div>
+        <div class="main col-11 col-md-5 m-2 m-md-0">
+            <div class="accheader">
+                <div class="blockheader">Wash Your Hands Frequently</div>
+                <div class="toggle">
+                    <span class="plus" onclick="pluss(0)">&plus;</span>
+                    <span class="minus"onclick="minus(0)">&minus;</span>
+                </div>
+            </div>
+            <div class="para">
+                <ul>
+                    <li>Wash your hands as frequently as you can, especially before and after meals, OR after coughing or sneezing</li>
+                    <li> Use hand sanitisers when you cannot use soap</li>
+                </ul>
+            </div>
+            <div class="accheader">
+                <div class="blockheader">Avoid Going To Public Places</div>
+                <div class="toggle">
+                    <span class="plus" onclick="pluss(1)">&plus;</span>
+                    <span class="minus" onclick="minus(1)">&minus;</span>
+                </div>
+            </div>
+            <div class="para">
+                <ul>
+                <li>stay safe by taking some simple precautions, such as physical distancing</li>
+                <li>wearing a mask, keeping rooms well ventilated, avoiding crowds.</li>
+                </ul>
+            </div>
+            <div class="accheader">
+                <div class="blockheader">
+                    Stay Home If You’re Unwell</div>
+                <div class="toggle">
+                    <span  class="plus" onclick="pluss(2)">&plus;</span>
+                    <span class="minus" onclick="minus(2)">&minus;</span>
+                </div>
+            </div>
+            <div class="para">
+                <ul>
+                    <li>As much as possible, stay in a specific room and away from other people and pets in your home</li>
+                    <li>If possible, you should use a separate bathroom.</li>
+                    </ul>
+            </div>
+    
+            <div class="accheader">
+                <div class="blockheader">
+                    Practice Respiratory Hygiene</div>
+                <div class="toggle">
+                    <span  class="plus" onclick="pluss(3)">&plus;</span>
+                    <span class="minus" onclick="minus(3)">&minus;</span>
+                </div>
+            </div>
+            <div class="para">
+                <ul>
+                    <li>Cover your mouth and nose when coughing or sneezing.</li>
+                    <li>Use tissues and throw them away.</li>
+                    </ul>
+            </div>
+            <div class="accheader">
+                <div class="blockheader">
+                    Clean & Disinfect Your Home</div>
+                <div class="toggle">
+                    <span  class="plus" onclick="pluss(4)">&plus;</span>
+                    <span class="minus" onclick="minus(4)">&minus;</span>
+                </div>
+            </div>
+            <div class="para">
+                <ul>
+                <li>Focus on high-touch surfaces such as doorknobs, tables, handles, light switches, and countertops.</li>
+                <li>Clean other surfaces in your home when they are visibly dirty or as needed.</li>
+                </ul>
+            </div>
+            </div>
+    </div>
+</section>
+  <!-- Precautions -->
+  
+  <!-- social media -->
+  <section class="layer-3" id="Blog">
+    <div class="s-title">
+        <h1>STAY UPDATED ON SOCIAL MEDIA</h1>
+    </div>
+    <div class="social m-4 m-md-0 row">
+        <div class="s-box1 m-3 col-12 col-md-3">
+                <div class="s-head">
+                    <div class="s-img">
+                    <img src="https://pbs.twimg.com/profile_images/875476478988886016/_l61qZdR_normal.jpg" alt="">
+                    <img src="{{ url_for('static', filename='images/insta.PNG') }}" alt="">
+                    </div>
+                    <div>
+                        <h2>World Health Organization (WHO)</h2>
+                    </div>
+                </div>
+                <div class="s-des">
+                    <article>If COVID-19 is spreading in your community, stay safe by taking some simple precautions, such as physical distancing, wearing a mask, keeping rooms...</article>
+                    <p><a href="https://www.instagram.com/who/?hl=en">Read More >></a></p>
+                </div>
+        </div>
+        <div class="s-box2 m-3 col-12 col-md-3">
+            <div class="s-head">
+                <div class="s-img">
+                    <img src="https://pbs.twimg.com/profile_images/875476478988886016/_l61qZdR_normal.jpg" alt="">
+                    <img src="{{ url_for('static', filename='images/twit.PNG') }}" alt="">
+                </div>
+                <div>
+                    <h2>World Health Organization (WHO)</h2>
+                </div>
+            </div>
+            <div class="s-des">
+                <article>Through a CAD9.9 million grant from @CanadaDev, WHO will help boost access to primary health care for women, girls & vulnerabl...</article>
+                <p><a href="https://twitter.com/WHO/status/1381230685675999233">Read More >></a></p>
+            </div>
+        </div>
+        <div class="s-box3 m-3 col-12 col-md-3">
+            <div class="s-head">
+                <div class="s-img">
+                    <img src="https://pbs.twimg.com/profile_images/875476478988886016/_l61qZdR_normal.jpg" alt="">
+                    <img src="{{ url_for('static', filename='images/facebook.PNG') }}" alt="">
+                </div>
+                <div>
+                    <h2>World Health Organization (WHO)</h2>
+                </div>
+            </div>
+            <div class="s-des">
+                <article>World Health Organization (WHO), Geneva, Switzerland. 12M likes. This is the World Health Organization (WHO) official Facebook Page...</article>
+                <p><a href="https://www.facebook.com/WHO/">Read More >></a></p>
+            </div>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='images/undraw_Social_notifications_re_xcbi.png') }}" class="s-stic" style="width: 20vw;" alt="">
+    
+  </section>
+  <!-- social media -->
+  
+  <!-- Testing -->
+<section class="layer-4" id="testing">
+  
+    <marquee direction="left">Covid-19 Detection Using <span>Chest x-ray </span></marquee>
+    <div class="testing row">
+        <!-- <div class="form-card p-5 col-12 col-lg-6">
+            <h2>Testing</h2>
+            <form action="/action_page.php" class="mt-5">
+                <label for="myfile">Select files:</label>
+                <input type="file" class="upload-box" id="myfile" name="myfile" multiple><br>
+                <h4 class="mt-4">Symptoms</h4>
+                <input type="checkbox" >
+                <label >cold</label><br>
+                <input type="checkbox" >
+                <label >Fever</label><br>
+                <input type="checkbox" >
+                <label >Cough</label><br><br>
+                <input type="submit" onclick="sub()" class="button">
+            </form>
+        </div> -->
+        <div class="form-card p-5 col-12 col-lg-6">
+            <h2>Covid-19 Prediction</h2>
+            <form id="upload-file"  class="mt-5" method="post" enctype="multipart/form-data">
+                <label for="imageUpload" class="upload-label">
+                    Select X-Rays
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </form>
+        
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict !</button>
+                </div>
+            </div>
+        
+            <div class="loader" style="display:none;"></div>
+        
+            <h3 id="result">
+                <span> </span>
+            </h3>
+        
+        </div>
+        <div class="slide-show p-4 col-12 col-lg-6">
+            <img src="{{ url_for('static', filename='images/one.PNG') }}" id="slideimage">
+        </div>
+    </div>
+    </section>
+</div>
+<footer class="footer">&copy;Copyright 2021. Powered by Batch 5</footer>
+</section>
+
+{% endblock %}
